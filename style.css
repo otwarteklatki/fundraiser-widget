@@ -1,0 +1,153 @@
+:root {
+  --primary: #0f766e;
+  --primary-dark: #0b5e57;
+  --ink: #102a43;
+  --panel: #f8fbff;
+  --border: #d9e2ec;
+  --muted: #486581;
+  --success-bg: #eefbf6;
+  --success-text: #147d64;
+  --error-bg: #fdecec;
+  --error-text: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 8px;
+  font-family: "Avenir Next", "Segoe UI", "Noto Sans", sans-serif;
+  color: var(--ink);
+  background: transparent;
+}
+
+.widget {
+  width: min(100%, 320px);
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #ffffff 0%, var(--panel) 100%);
+  box-shadow: 0 10px 30px rgba(16, 42, 67, 0.12);
+  animation: rise-in 360ms ease-out both;
+}
+
+.trust-badge {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid #b6e6da;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--primary);
+  background: #f0fdfa;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.intro {
+  margin: 4px 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334e68;
+}
+
+input {
+  width: 100%;
+  padding: 9px 11px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  background: #ffffff;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #57c1b3;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+}
+
+button {
+  width: 100%;
+  padding: 9px;
+  border: 0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+button:hover {
+  filter: brightness(1.03);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.25);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.result {
+  margin: 8px 0 0;
+  min-height: 40px;
+  padding: 9px;
+  border-radius: 10px;
+  text-align: center;
+  background: #f1f5f9;
+  font-size: 13px;
+  border: 1px solid #d9e2ec;
+  color: #334e68;
+  animation: fade-in 260ms ease both;
+}
+
+.result.success {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border-color: #b8ead7;
+}
+
+.result.error {
+  color: var(--error-text);
+  background: var(--error-bg);
+  border-color: #f7c6c7;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}

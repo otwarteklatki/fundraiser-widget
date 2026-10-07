@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weryfikacja kodu fundraisera</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="widget" role="region" aria-label="Weryfikacja kodu fundraisera">
+    <p class="trust-badge">Bezpieczna weryfikacja</p>
+    <h1>Sprawdź kod fundraisera</h1>
+    <p class="intro">Wpisz kod i potwierdź dane osoby prowadzącej rozmowę.</p>
+
+    <label for="consultantCode">Kod fundraisera</label>
+    <input type="text" id="consultantCode" placeholder="np. K888" autocomplete="off" />
+    <button type="button" id="verifyBtn">Zweryfikuj kod</button>
+    <p id="consultantInfo" class="result" aria-live="polite">Wpisz kod i kliknij przycisk.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
