@@ -1,5 +1,6 @@
 // Edytuj tę listę, aby dodać/zmienić kody fundraiserów.
 const FUNDRAISERS = {
+  // Wewnętrzny zespół telefundraisingu Otwartych Klatek (7 osób)
   k888: "Iwona Konieczna",
   k555: "Nina Gębczyńska",
   k777: "Aleksandra Sierpińska",
@@ -7,6 +8,16 @@ const FUNDRAISERS = {
   k222: "Małgorzata Boaro",
   k333: "Paula Nowak",
   k444: "Kamila Krywoszłyków",
+
+  // Zewnętrzni telefundraiserzy – agencja CAF Call (kody z poprzedniego widgetu Piotra Bilika)
+  k178: "Beata Wawrzyniak",
+  k899: "Klaudia Żulczyk",
+  k879: "Natalia Detmerowska",
+  k460: "Kamil Warzocha",
+  k446: "Kamila Mazurek",
+  k689: "Natalia Cieciuch",
+  k1262: "Wiktoria Oponecka",
+  k1281: "Zuzanna Zalewska",
 };
 
 const input = document.getElementById("consultantCode");
